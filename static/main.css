@@ -1,8 +1,21 @@
-body{
-    background: FABFB2;
-
+*{
+    margin: 0;
+    padding: 0;
 }
 
-h1, h2, h3 {
-    font-family: Helvetica , sans-serif ;
+body{
+    background-color: #a76868;
+    color: #000;
+    font-family: "Helvetica", sans-serif;
+}
+
+.nav-enlace{
+    background: #9e9a99;
+    color: #000;
+    padding: 10px 20px;
+}
+
+.main{
+    display: grid;
+
 }
