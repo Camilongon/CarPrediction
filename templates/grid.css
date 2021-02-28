@@ -1,0 +1,6 @@
+.content-sect{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 5px solid #000;
+    grid-gap: 10px;
+}

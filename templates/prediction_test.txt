@@ -1,0 +1,122 @@
+	<form action="POST" action="">
+            {{ form.hidden_tag() }}
+                 <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">Ingresa datos del Auto</legend>
+                    
+                    <div class="form-group">
+                        {{ form.marca.label(class="form-control-label") }}
+                        {% if form.marca.errors %}
+                            {{ form.marca(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in fomr.marca.errors %}
+                                    <span> {{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{form.marca(class="form-control form-control-lg")}}
+                        {% endif %}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form.fuel.label(class="form-control-label") }}
+                        {% if form.fuel.errors %}
+                            {{ form.fuel(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in fomr.fuel.errors %}
+                                    <span> {{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{form.fuel(class="form-control form-control-lg")}}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.seller_type.label(class="form-control-label") }}
+                        {{ form.seller_type(class="form-control form-control-lg")}}
+                    </div>
+                    <div class="form-group">
+                        {{ form.transmission.label(class="form-control-label") }}
+                        {{ form.transmission(class="form-control form-control-lg")}}
+                    </div>
+                    <div class="form-group">
+                        {{ form.owner.label(class="form-control-label") }}
+                        {{ form.owner(class="form-control form-control-lg")}}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form.seats.label(class="form-control-label") }}
+                        {% if form.seats.errors %}
+                            {{ form.seats(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in fomr.seats.errors %}
+                                    <span> {{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{form.seats(class="form-control form-control-lg")}}
+                        {% endif %}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form.year.label(class="form-control-label") }}
+                        {% if form.year.errors %}
+                            {{ form.year(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in fomr.year.errors %}
+                                    <span> {{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{form.year(class="form-control form-control-lg")}}
+                        {% endif %}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form.km_driven.label(class="form-control-label") }}
+                        {% if form.km_driven.errors %}
+                            {{ form.km_driven(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in fomr.km_driven.errors %}
+                                    <span> {{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{form.km_driven(class="form-control form-control-lg")}}
+                        {% endif %}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form.mileage.label(class="form-control-label") }}
+                        {% if form.mileage.errors %}
+                            {{ form.mileage(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in fomr.mileage.errors %}
+                                    <span> {{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{form.mileage(class="form-control form-control-lg")}}
+                        {% endif %}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form.max_power.label(class="form-control-label") }}
+                        {% if form.max_power.errors %}
+                            {{ form.max_power(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in fomr.max_power.errors %}
+                                    <span> {{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{form.max_power(class="form-control form-control-lg")}}
+                        {% endif %}
+                    </div>
+                    
+                    <div class="form-group">
+                        {{ form.submit(class="btn btn-outline-info")}}
+                    </div>
+    
+    
+                </fieldset>
+            </form>

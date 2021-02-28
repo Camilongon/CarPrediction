@@ -1,0 +1,3 @@
+pip list --format=freeze > requirements.txt
+
+dado que la version normal imprime las dependencias con referencias directas "@ file://..."

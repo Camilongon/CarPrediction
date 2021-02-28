@@ -62,14 +62,14 @@ def predict():
         maxp = form.max_power.data
         
         
-        val = [marca, fuel, seller, trans, ow, seats, year, km, mil, maxp]
+        val = [ marca, fuel, seller, trans, ow, seats, year, km, mil, maxp]
         col = ['marca','fuel','seller_type','transmission','owner','seats','num_year','km_driven','mileage','max_power']
         
         df_pred = pd.DataFrame(val).T
         df_pred.columns = col
         
         prediction = model.predict(df_pred)
-        flash("Precio sugerido: {0}".format(prediction[0]), 'succes')
+        flash("Precio sugerido: {0}".format(prediction[0]), 'success')
         #else:
         #    flash("Valores incorrectos", 'warning')
         return redirect(url_for('base'))
@@ -79,4 +79,3 @@ def predict():
 
 if __name__ == '__main__':
     app.run(debug=True)
-    

@@ -1,0 +1,217 @@
+{% extends "base.html"%}
+<!-- <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='base.css')}}"> -->
+{% block content %}
+    
+    <div class="row">
+        <div class="col-md-8">
+            <form action="" method="POST">
+                {{ form.hidden_tag() }}
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4">Ingresa datos del Auto</legend>
+                    
+                        <div class="form-group row">
+                            {{ form.marca.label(class="form-control-label") }}
+                            {% if form.marca.errors %}
+                                {{ form.marca(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in fomr.marca.errors %}
+                                        <span> {{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{form.marca(class="form-control form-control-lg")}}
+                            {% endif %}
+                        </div>
+                        
+                        <div class="form-group row">
+                            {{ form.fuel.label(class="form-control-label") }}
+                            {% if form.fuel.errors %}
+                                {{ form.fuel(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in fomr.fuel.errors %}
+                                        <span> {{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{form.fuel(class="form-control form-control-lg")}}
+                            {% endif %}
+                        </div>
+                        <div class="form-group row">
+                            {{ form.seller_type.label(class="form-control-label") }}
+                            {{ form.seller_type(class="form-control form-control-lg")}}
+                        </div>
+                        <div class="form-group row">
+                            {{ form.transmission.label(class="form-control-label") }}
+                            {{ form.transmission(class="form-control form-control-lg")}}
+                        </div>
+                        <div class="form-group row">
+                            {{ form.owner.label(class="form-control-label") }}
+                            {{ form.owner(class="form-control form-control-lg")}}
+                        </div>
+                        
+                        <div class="form-group row">
+                            {{ form.seats.label(class="form-control-label") }}
+                            {% if form.seats.errors %}
+                                {{ form.seats(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in fomr.seats.errors %}
+                                        <span> {{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{form.seats(class="form-control form-control-lg")}}
+                            {% endif %}
+                        </div>
+                        
+                        <div class="form-group row">
+                            {{ form.year.label(class="form-control-label") }}
+                            {% if form.year.errors %}
+                                {{ form.year(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in fomr.year.errors %}
+                                        <span> {{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{form.year(class="form-control form-control-lg")}}
+                            {% endif %}
+                        </div>
+                        
+                        <div class="form-group row">
+                            {{ form.km_driven.label(class="form-control-label") }}
+                            {% if form.km_driven.errors %}
+                                {{ form.km_driven(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in fomr.km_driven.errors %}
+                                        <span> {{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{form.km_driven(class="form-control form-control-lg")}}
+                            {% endif %}
+                        </div>
+                        
+                        <div class="form-group row">
+                            {{ form.mileage.label(class="form-control-label") }}
+                            {% if form.mileage.errors %}
+                                {{ form.mileage(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in fomr.mileage.errors %}
+                                        <span> {{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{form.mileage(class="form-control form-control-lg")}}
+                            {% endif %}
+                        </div>
+                        
+                        <div class="form-group row">
+                            {{ form.max_power.label(class="form-control-label") }}
+                            {% if form.max_power.errors %}
+                                {{ form.max_power(class="form-control form-control-lg") }}
+                                <div class="invalid-feedback">
+                                    {% for error in fomr.max_power.errors %}
+                                        <span> {{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{form.max_power(class="form-control form-control-lg")}}
+                            {% endif %}
+                        </div>
+                        
+                        <div class="form-group">
+                            {{ form.submit(class="btn btn-outline-info")}}
+                        </div>
+                    </fieldset>
+            </form>
+        </div>
+
+        <div class="col-md-4">
+            <div class="container p-3 mb-2 bg-info text-white rounded">
+                <h1>Model Example</h1>
+                <form action="" method= "GET" >
+                    <fieldset class="form-group bg-secondary p-3 rounded"> 
+                        
+                        <div class="my-2 form-group row">
+                            <label class="col-sm-2 col-form-label">Marca:</label>
+                            <div class="col-sm-6 offset-sm-2">
+                                <input type="text" readonly class="form-control form-control-plaintext px-2" value="Opel">
+                            </div>
+                        </div>
+
+                        <div class="my-2 form-group row">
+                            <label class="col-sm-2 col-form-label">Tipo de Combutible:</label>
+                            <div class="col-sm-6 offset-sm-2">
+                                <input type="text" readonly class="mt-4 px-2 form-control form-control-plaintext" value="Diesel">
+                            </div>
+                        </div>
+
+                        <div class="my-2 form-group row">
+                            <label class="col-sm-2 col-form-label">Vendedor:</label>
+                            <div class="col-sm-6 offset-sm-2">
+                                <input type="text" readonly class="form-control form-control-plaintext px-2" value="Individual">
+                            </div>
+                        </div>
+
+                        <div class="my-2 form-group row">
+                            <label class="col-sm-2 col-form-label">Transmision:</label>
+                            <div class="col-sm-6 offset-sm-2">
+                                <input type="text" readonly class="pl-2 form-control form-control-plaintext px-2" value="Manual">
+                            </div>
+                        </div>
+
+                        <div class="my-2 form-group row">
+                            <label class="col-sm-2 col-form-label">Owner:</label>
+                            <div class="col-sm-6 offset-sm-2">
+                                <input type="text" readonly class="form-control form-control-plaintext px-2 m-auto" value="First Owner">
+                            </div>
+                        </div>
+
+                        <div class="my-2 form-group row">
+                            <label class="col-sm-2 col-form-label">Asientos:</label>
+                            <div class="col-sm-6 offset-sm-2">
+                                <input type="text" readonly class="form-control form-control-plaintext px-2" value="5">
+                            </div>
+                        </div>
+
+                        <div class="my-2 form-group row">
+                            <label class="col-sm-2 col-form-label">Año del Auto:</label>
+                            <div class="col-sm-6 offset-sm-2">
+                                <input type="text" readonly class="mt-4 px-2 form-control form-control-plaintext " value="2014">
+                            </div>
+                        </div>
+                        
+                        <div class="my-2 form-group row">
+                            <label class="col-sm-2 col-form-label">Kilometros conducidos:</label>
+                            <div class="col-sm-6 offset-sm-2">
+                                <input type="text" readonly class="form-control form-control-plaintext px-2" value="145000">
+                            </div>
+                        </div>
+
+                        <div class="my-2 form-group row">
+                            <label class="col-sm-2 col-form-label">Kilometraje:</label>
+                            <div class="col-sm-6 offset-sm-2">
+                                <input type="text" readonly class="form-control form-control-plaintext px-2" value="23.4">
+                            </div>
+                        </div>
+
+                        <div class="my-2 form-group row">
+                            <label class="col-sm-2 col-form-label">BHP: </label>
+                            <div class="col-sm-6 offset-sm-2">
+                                <input type="text" readonly class="form-control form-control-plaintext px-2" value="74">
+                            </div>
+                        </div>
+                        
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col-sm-2">      
+            <br><h3><small>Waiting...</small>{{ prediction }}<h3>
+        </div>
+    </div>
+                
+    
+{% endblock content %}
