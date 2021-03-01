@@ -42,7 +42,7 @@ notebook==6.1.6
 numpy==1.19.5
 olefile==0.46
 packaging==20.8
-pandas==1.2.1
+pandas==1.2.2
 pandocfilters==1.4.3
 parso==0.7.0
 pickleshare==0.7.5
